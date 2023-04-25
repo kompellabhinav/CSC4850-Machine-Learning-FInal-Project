@@ -1,4 +1,4 @@
-# CSC4850 Machine Learning Final Project
+# Predicting Students’ Academic Success Using Socioeconomic Factors
 
 ## Models Used
 
