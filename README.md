@@ -12,6 +12,8 @@
 8. SVM - RBF kernel
 9. Gradient Boosting
 10. Multi-layer Perceptron (MLP)
+11. K-Nearest Neighbour
+12. AdaBoost Classifier
 
 ## Decision Tree
 
@@ -83,6 +85,27 @@
 
 <img width="1028" alt="Screenshot 2023-04-23 at 8 45 17 PM" src="https://user-images.githubusercontent.com/101344801/234143352-8f7d13d3-a36f-4689-b676-afc552b81e38.png">
 
+## K-Nearest Neighbour
+
+<img width="999" alt="Screenshot 2023-04-24 at 10 26 18 PM" src="https://user-images.githubusercontent.com/101344801/234160182-6ecb5bc1-55f2-4658-a7ea-a4fcfd0d64bd.png">
+
+<img width="1020" alt="Screenshot 2023-04-24 at 10 30 22 PM" src="https://user-images.githubusercontent.com/101344801/234160207-899a3c4c-5a1f-49bf-b53b-8b92059ff775.png">
+
+
+## SVM- Poly Kernel
+
+<img width="1013" alt="Screenshot 2023-04-24 at 10 35 11 PM" src="https://user-images.githubusercontent.com/101344801/234161098-3e2602d8-94fe-4159-b04d-29791944332c.png">
+
+<img width="991" alt="Screenshot 2023-04-24 at 10 37 49 PM" src="https://user-images.githubusercontent.com/101344801/234161122-a24f1df7-5fe4-4da0-bc92-6366fdbf395c.png">
+
+
+## AdaBoost Classifier
+
+<img width="1013" alt="Screenshot 2023-04-24 at 10 42 25 PM" src="https://user-images.githubusercontent.com/101344801/234161927-d43d3010-2989-488e-95f6-e9a605e1cceb.png">
+
+<img width="1042" alt="Screenshot 2023-04-24 at 10 44 19 PM" src="https://user-images.githubusercontent.com/101344801/234161938-6eea91b5-f9f8-45d4-87ef-58745794df72.png">
+
+
 ## Best fold per Split
 
 |Model              |50/50|70/30|80/20|Best split|
@@ -97,6 +120,9 @@
 |SVM- RBF Kernel    | 8   | 2   | 1   | 50/50    |
 |Gadient Boosting   | 3   | 2   | 6   | 80/20    |
 |MLP                | 3   | 2   | 6   | 80/20    |
+|K- Nearest Neighbour | 3 | 2   | 3   | 50/50    |
+|SVM- Poly Kernel   | 3   | 2   | 6   | 70/30    |
+|AdaBoost           | 4   | 2   | 6   | 50/50    |
 
 The most common fold for splits 50/50, 70/30, 80/20 were 3,2,6 respectively. These folds were the most frequent by a landslide in their splits. Our hypothesis for this is since our k-fold cross validation had the shuffle parameter set to true, the data was randomly shuffled and split into fold which could have led to certain folds having a more representative sample of the overall data than others. This difference in representativeness is magnified when you have three splits since different splits will produce different distributions of data for the folds to generate from. Combining this with our aforementioned imbalance class leads to the possible explanation that certain folds may just be performing better due to better distributions of the target. 
 
