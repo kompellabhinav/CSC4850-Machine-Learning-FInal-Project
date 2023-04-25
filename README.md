@@ -83,6 +83,22 @@
 
 <img width="1028" alt="Screenshot 2023-04-23 at 8 45 17 PM" src="https://user-images.githubusercontent.com/101344801/234143352-8f7d13d3-a36f-4689-b676-afc552b81e38.png">
 
+## Best fold per Split
+
+|Model              |50/50|70/30|80/20|Best split|
+|:------------------|:----|:----|:----|:---------|
+|Decision Tree      | 1   | 2   | 7   | 50/50    |
+|Random Forest      | 3   | 2   | 1   | 50/50    |
+|Perceptron         | 3   | 1   | 6   | 50/50    |
+|Naive Bayes        | 3   | 2   | 6   | 50/50    |
+|Logistic Regression| 1   | 2   | 7   | 50/50    |
+|Linear Regression  | 3   | 2   | 6   | 50/50    |
+|SVM- Linear Kernel | 0   | 2   | 6   | 70/30    |
+|SVM- RBF Kernel    | 8   | 2   | 1   | 50/50    |
+|Gadient Boosting   | 3   | 2   | 6   | 80/20    |
+|MLP                | 3   | 2   | 6   | 80/20    |
+
+The most common fold for splits 50/50, 70/30, 80/20 were 3,2,6 respectively. These folds were the most frequent by a landslide in their splits. Our hypothesis for this is since our k-fold cross validation had the shuffle parameter set to true, the data was randomly shuffled and split into fold which could have led to certain folds having a more representative sample of the overall data than others. This difference in representativeness is magnified when you have three splits since different splits will produce different distributions of data for the folds to generate from. Combining this with our aforementioned imbalance class leads to the possible explanation that certain folds may just be performing better due to better distributions of the target. 
 
 ## Best Model Selection
 
